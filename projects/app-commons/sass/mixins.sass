@@ -1,0 +1,37 @@
+@mixin flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+  
+@mixin text-ellipsis
+  display: block
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+@mixin pseudo-block($width: null, $height: null, $content: '')
+  @if ($width and $height)
+    content: $content
+    display: inline-block
+    width: $width
+    height: $height
+
+@mixin caret($size: 10, $color: white)
+  @include pseudo-block(#{$size}px, #{$size}px)
+  border-right: 2px solid $color
+  border-bottom: 2px solid $color
+  transform: rotate(225deg)
+
+@mixin horizontal-gradient($from, $to, $stop: 100%)
+  background-color: $from
+  background-image: -moz-linear-gradient(left, $from 0%, $to $stop)
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to))
+  background-image: -webkit-linear-gradient(left, $from 0%, $to $stop)
+  background: -ms-linear-gradient(left, $from 0%, $to $stop)
+  background: linear-gradient(to right, $from 0%, $to $stop)
+
+@mixin middle-by-position
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)

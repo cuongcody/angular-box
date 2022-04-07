@@ -1,0 +1,3 @@
+# Shared
+
+> This package contains the utils for the application only. They can be util functions, mixin, class abstractions, base classes...

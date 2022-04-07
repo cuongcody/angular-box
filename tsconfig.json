@@ -1,0 +1,69 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "paths": {
+      "@environments/*": [
+        "projects/app/src/environments/*"
+      ],
+      "@security": [
+        "projects/app/src/app/security/index"
+      ],
+      "@core/*": [
+        "projects/app/src/app/core/*"
+      ],
+      "@models/*": [
+        "projects/app/src/app/models/*"
+      ],
+      "@constants/*": [
+        "projects/app/src/app/constants/*"
+      ],
+      "@modules/*": [
+        "projects/app/src/app/modules/*"
+      ],
+      "@shared/*": [
+        "projects/app/src/app/shared/*"
+      ],
+      "@services/*": [
+        "projects/app/src/app/services/*"
+      ],
+      "@stores/*": [
+        "projects/app/src/app/stores/*"
+      ],
+      "@pages/*": [
+        "projects/app/src/app/pages/*"
+      ],
+      "@app-commons": [
+        "projects/app-commons/index"
+      ],
+      "@app-ui": [
+        "projects/app-ui/src/public-api"
+      ]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

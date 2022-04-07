@@ -1,0 +1,16 @@
+<app-shared-header></app-shared-header>
+<section *ngIf="!isShowDetails">
+  <div *ngFor="let box of boxes$ | async">
+    <img src="{{ box.iconUrl }}" alt="{{ box.name }}" />
+    <h4>{{ box.name }}</h4>
+    <ui-button (click)="toggleBox(box, true)">Open</ui-button>
+  </div>
+</section>
+
+<section class="details" *ngIf="isShowDetails">
+  <ng-container *ngIf="boxDetails$ | async as details">
+    <img src="{{ details.iconUrl }}" alt="{{ details.name }}" />
+    <h2>{{ details.name }}</h2>
+  </ng-container>
+  <ui-button (click)="toggleBox(undefined, false)">Back</ui-button>
+</section>
